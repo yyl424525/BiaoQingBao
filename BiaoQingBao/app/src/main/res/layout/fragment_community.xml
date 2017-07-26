@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <!--导航栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#F9C701"
+        android:orientation="horizontal"
+        android:layout_height="50dp">
+
+
+        <TextView
+            android:text="主页"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout_home_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#E6E6E6"
+        app:tabIndicatorHeight="2dp"
+        app:tabSelectedTextColor="#FF9900"
+        app:tabTextColor="#000"
+        app:tabGravity="fill"
+        app:tabMaxWidth="0dp"
+        app:tabIndicatorColor="#FF9900"
+
+        app:tabMode="fixed"
+        android:gravity="center_vertical"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
+        >
+    </android.support.design.widget.TabLayout>
+
+    <!--&lt;!&ndash;-->
+    <!--app:tabIndicatorHeight="0dp"是为了不显示tab底部的横线-->
+    <!--app:tabMode="fixed"是让底部tab布局不可滑动-->
+    <!--app:tabContentStart="100dp"TabLayout开始位置的偏移量：-->
+    <!--app:tabGravity="center"//居中，如果是fill，则是充满-->
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager_home_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+    </android.support.v4.view.ViewPager>
+
+
+</LinearLayout>
